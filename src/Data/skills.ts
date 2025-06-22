@@ -1,0 +1,18 @@
+export const skillsData = [
+  { name: "JavaScript", logo: "/logos/javascript-logo-svgrepo-com.svg" },
+  { name: "TypeScript", logo: "/logos/typescript-svgrepo-com.svg" },
+  { name: "React", logo: "/logos/react-1-logo-svgrepo-com.svg" },
+  { name: "Next.js", logo: "/logos/nextjs-fill-svgrepo-com.svg" },
+  { name: "Tailwind CSS", logo: "/logos/tailwindcss-icon-svgrepo-com.svg" },
+  { name: "Express.js", logo: "/logos/icons8-express-js.svg" },
+  { name: "Node.js", logo: "/logos/nodejs-icon-svgrepo-com.svg" },
+  { name: "MongoDB", logo: "/logos/mongo-svgrepo-com.svg" },
+  { name: "PostgresSql", logo: "/logos/postgresql-svgrepo-com.svg" },
+  { name: "Prisma", logo: "/logos/prisma-svgrepo-com.svg" },
+  { name: "Git", logo: "/logos/git-svgrepo-com.svg" },
+  { name: "Docker", logo: "/logos/docker-svgrepo-com.svg" },
+  { name: "Postman", logo: "/logos/postman-icon-svgrepo-com.svg" },
+  { name: "Vercel", logo: "/logos/vercel-fill-svgrepo-com.svg" },
+  { name: "Firebase", logo: "/logos/firebase-svgrepo-com.svg" },
+  { name: "Vite", logo: "/logos/vite-svgrepo-com.svg" },
+];
