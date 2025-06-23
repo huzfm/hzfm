@@ -12,12 +12,10 @@ import ThemeToggle from "@/Components/ThemeToggle";
 import { Heart } from "lucide-react";
 import GithubGraph from "@/Components/Github-Graph";
 import CodeTimeBadge from "@/Components/Code-Time";
-import { useState } from "react";
 import OnlineStatus from "@/Components/Animating-Text";
 
 export default function Home() {
   const { isDark } = useTheme();
-  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <>
