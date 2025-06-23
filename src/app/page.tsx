@@ -6,9 +6,11 @@ import { projects } from "@/Data/project";
 import { skillsData } from "../Data/skills";
 import ProjectCard from "@/Components/ProjectCard";
 import { Mail, Github, Twitter } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { useTheme } from "@/contexts/ThemeContext";
 import ThemeToggle from "@/Components/ThemeToggle";
+import { Heart } from "lucide-react";
+import GithubGraph from "@/Components/Github-Graph";
 
 export default function Home() {
   const { isDark } = useTheme();
@@ -36,9 +38,9 @@ export default function Home() {
               <Image
                 src={personalData.ProfilePicture}
                 alt={personalData.Name}
-                width={64}
-                height={64}
-                className={`w-15 h-15 rounded-full border-2 ${
+                width={300}
+                height={300}
+                className={` w-15 h-15 rounded-full border-2 ${
                   isDark ? "border-gray-700" : "border-gray-300"
                 }`}
               />
@@ -47,9 +49,11 @@ export default function Home() {
                   <h1 className="text-[24px] font-bold">{personalData.Name}</h1>
 
                   <div
-                    className={`inline-flex items-center gap-x-2 px-3 py-1 border border-gray-600 bg-black rounded-full text-sm font-medium ${
+                    className={`inline-flex items-center gap-x-2 px-3 py-1 border border-gray-600 rounded-full text-sm font-medium ${
                       isDark ? "text-white" : "text-black"
-                    }`}
+                    }
+                    ${isDark ? "bg-black " : "bg-white "}
+                    `}
                   >
                     <span className="text-[12px]">Online</span>
                     <span className="inline-block h-1 w-1 rounded-full bg-green-500 animate-ping"></span>
@@ -88,6 +92,9 @@ export default function Home() {
             }`}
           >
             <p>{personalData.aboutMe}</p>
+          </div>
+          <div className="pt-10">
+            <GithubGraph />
           </div>
         </section>
 
@@ -137,14 +144,22 @@ export default function Home() {
                 sourceCode={project.sourceCode}
               />
             ))}
+            <footer className="text-center pt-5 pb-5 flex justify-center items-center gap-2 text-sm/snug">
+              Made with{" "}
+              <Heart
+                className="w-5 h-5 text-red-500 inline"
+                fill="currentColor"
+              />{" "}
+              by huzfm
+            </footer>
           </div>
         </section>
       </div>
 
       {/* Sticky Contact Dock - Always at bottom */}
-      <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="fixed bottom-6  left-1/2 transform -translate-x-1/2 z-50">
         <div
-          className={`flex items-center gap-2 backdrop-blur-lg border rounded-2xl px-4 py-2 shadow-2xl ${
+          className={`flex items-center gap-2 backdrop-blur-lg border rounded-2xl px-4 py-3 shadow-2xl ${
             isDark
               ? "bg-gray-900/25 border-gray-700/50"
               : "bg-white/25 border-gray-300/50"
@@ -212,7 +227,7 @@ export default function Home() {
           </a>
 
           <a
-            href={contactData.discord}
+            href={contactData.LinkedIn}
             target="_blank"
             rel="noopener noreferrer"
             className={`group relative p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${
@@ -220,9 +235,9 @@ export default function Home() {
                 ? "bg-gray-800/50 hover:bg-gray-700/50"
                 : "bg-gray-100/50 hover:bg-gray-200/50"
             }`}
-            title="Discord"
+            title="LinkedIn"
           >
-            <FaDiscord
+            <FaLinkedin
               size={18}
               className={`transition-colors ${
                 isDark

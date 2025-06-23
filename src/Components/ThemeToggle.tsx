@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "@/contexts/ThemeContext";
-import { Sun, Moon } from "lucide-react";
+import { Sun, MoonStar } from "lucide-react";
 
 const ThemeToggle = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -9,7 +9,7 @@ const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={`
-        relative inline-flex h-10 w-10 items-center justify-center rounded-full
+        relative inline-flex h-10 w-10 items-center justify-center rounded-full bottom-3
         transition-all duration-300 ease-in-out
         ${
           isDark
@@ -17,7 +17,7 @@ const ThemeToggle = () => {
             : "bg-gray-200 hover:bg-gray-300 text-gray-800"
         }
         hover:scale-110 active:scale-95
-        border-2 ${isDark ? "border-gray-600" : "border-gray-400"}
+        border-1 ${isDark ? "border-slate-100" : "border-gray-900"}
       `}
       aria-label="Toggle theme"
     >
@@ -33,7 +33,7 @@ const ThemeToggle = () => {
             }
           `}
         />
-        <Moon
+        <MoonStar
           size={18}
           className={`
             absolute transition-all duration-300 ease-in-out
