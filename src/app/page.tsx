@@ -11,9 +11,13 @@ import { useTheme } from "@/contexts/ThemeContext";
 import ThemeToggle from "@/Components/ThemeToggle";
 import { Heart } from "lucide-react";
 import GithubGraph from "@/Components/Github-Graph";
+import CodeTimeBadge from "@/Components/Code-Time";
+import { useState } from "react";
+import OnlineStatus from "@/Components/Animating-Text";
 
 export default function Home() {
   const { isDark } = useTheme();
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <>
@@ -46,7 +50,9 @@ export default function Home() {
               />
               <div>
                 <div className="flex items-center gap-2">
-                  <h1 className="text-[24px] font-bold">{personalData.Name}</h1>
+                  <h1 className="text-sm sm:text-xl md:text-lg font-bold">
+                    {personalData.Name}
+                  </h1>
 
                   <div
                     className={`inline-flex items-center gap-x-2 px-3 py-1 border border-gray-600 rounded-full text-sm font-medium ${
@@ -55,11 +61,13 @@ export default function Home() {
                     ${isDark ? "bg-black " : "bg-white "}
                     `}
                   >
-                    <span className="text-[12px]">Online</span>
+                    <OnlineStatus />
                     <span className="inline-block h-1 w-1 rounded-full bg-green-500 animate-ping"></span>
                   </div>
                 </div>
-                <p className={isDark ? "text-gray-400" : "text-gray-600"}>
+                <p
+                  className={`text-sm  isDark ? "text-gray-400" : "text-gray-600"`}
+                >
                   @{personalData.Alias.toLowerCase()}
                 </p>
               </div>
@@ -95,6 +103,9 @@ export default function Home() {
           </div>
           <div className="pt-10">
             <GithubGraph />
+          </div>
+          <div className="pt-10">
+            <CodeTimeBadge />
           </div>
         </section>
 

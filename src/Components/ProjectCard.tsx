@@ -44,7 +44,7 @@ export default function ProjectCard({
         >
           {name}
         </h3>
-        <div className="flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="flex gap-1.5 ">
           <a
             href={live}
             target="_blank"
@@ -83,7 +83,7 @@ export default function ProjectCard({
       {/* Description */}
       <p
         className={`
-          text-sm leading-relaxed line-clamp-2 transition-colors
+          text-sm leading-relaxed  transition-colors
           ${
             isDark
               ? "text-gray-400 group-hover:text-gray-300"
