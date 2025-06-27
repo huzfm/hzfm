@@ -13,12 +13,14 @@ import { Heart } from "lucide-react";
 import GithubGraph from "@/Components/Github-Graph";
 import CodeTimeBadge from "@/Components/Code-Time";
 import OnlineStatus from "@/Components/Animating-Text";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   const { isDark } = useTheme();
 
   return (
     <>
+      <Analytics />
       {/* Fixed Background */}
       <div
         className={`
@@ -26,7 +28,6 @@ export default function Home() {
   ${isDark ? "bg-black" : "bg-white"}
 `}
       />
-
       {/* Scrollable Content */}
       <div
         className={`relative min-h-screen font-caprasimo p-4 md:p-8 max-w-4xl mx-auto pb-24 ${
@@ -164,7 +165,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-
       {/* Sticky Contact Dock - Always at bottom */}
       <div className="fixed bottom-6  left-1/2 transform -translate-x-1/2 z-50">
         <div
