@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Portfolio",
     description: "Checkout my latest work, projects, and skills!",
-    url: "https://yourdomain.com",
+    url: "https://huzfm.vercel.app",
     siteName: "Portfolio",
     images: [
       {
-        url: "https://yourdomain.com/thumbnail.jpg",
+        url: "https://huzfm/vercel.app",
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Portfolio",
     description: "Checkout my latest work, projects, and skills!",
-    images: ["https://yourdomain.com/thumbnail.jpg"],
+    images: ["/public/card.jpg"],
   },
 };
 
