@@ -31,7 +31,7 @@ export default function Home() {
       {/* Scrollable Content */}
       <div
         className={`relative min-h-screen font-caprasimo p-4 md:p-8 max-w-4xl mx-auto pb-24 ${
-          isDark ? "text-white" : "text-gray-900"
+          isDark ? "text-white" : "text-black"
         }`}
       >
         {/* Header */}
@@ -80,7 +80,7 @@ export default function Home() {
         {/* About Section */}
         <section className="mb-12">
           <h2
-            className={`text-xl mb-4 font-dotz ${
+            className={`text-2xl  mb-4 font-mono ${
               isDark ? "text-white" : "text-black"
             }`}
           >
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
           <div
             className={`space-y-4 leading-relaxed ${
-              isDark ? "text-gray-300" : "text-gray-700"
+              isDark ? "text-white" : "text-black"
             }`}
           >
             <p>{personalData.aboutMe}</p>
@@ -121,10 +121,10 @@ export default function Home() {
             {skillsData.map((skill, index) => (
               <span
                 key={index}
-                className={`inline-flex items-center gap-2 px-3 py-1 rounded text-sm border ${
+                className={`inline-flex items-center gap-2 px-3 py-1 rounded text-sm border transition-transform duration-300 hover:scale-110 ${
                   isDark
-                    ? "bg-gray-800 text-gray-300 border-gray-700"
-                    : "bg-gray-100 text-gray-700 border-gray-300"
+                    ? "bg-gray-800 text-gray-300 border-gray-700 "
+                    : "bg-gray-100 text-gray-900 border-gray-300 "
                 }`}
               >
                 <img src={skill.logo} alt={skill.name} className="h-4 w-4" />
