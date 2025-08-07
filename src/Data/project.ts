@@ -8,6 +8,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "0",
+    name: "Devark",
+    description:
+      "Devark is a powerful CLI tool that helps you scaffold ready to use backend features instantly — like Oauth, OTP services, payments, file uploads, and more — without the boilerplate.",
+    live: "https://devarkfe.vercel.app/",
+    sourceCode: "https://github.com/huzfm/devark",
+  },
+  {
     id: "1",
     name: "Skill Connect",
     description:

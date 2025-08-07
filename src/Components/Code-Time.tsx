@@ -1,35 +1,21 @@
+"use client ";
 import { useEffect, useState } from "react";
-
-// ✅ Define the API response type
-interface CodeTimeResponse {
-  schemaVersion: number;
-  label: string;
-  message: string;
-  color: string;
-  style: string;
-}
 
 export default function CodeTimeBadge() {
   const [message, setMessage] = useState<string>("");
 
-  const fetchBadge = async () => {
-    try {
-      const res = await fetch(
-        "https://api.codetime.dev/v3/users/shield?uid=29930"
-      );
-      const json: CodeTimeResponse = await res.json();
-      setMessage(json.message);
-    } catch (error) {
-      console.error("Failed to fetch CodeTime data:", error);
-    }
-  };
-
   useEffect(() => {
-    fetchBadge(); // initial fetch
+    const fetchBadge = async () => {
+      try {
+        const res = await fetch("/api/codetime");
+        const json = await res.json();
+        if (json.message) setMessage(json.message);
+      } catch (error) {
+        console.error("Failed to fetch CodeTime badge:", error);
+      }
+    };
 
-    const interval = setInterval(fetchBadge, 60 * 1000); // re-fetch every 60 sec
-
-    return () => clearInterval(interval); // cleanup
+    fetchBadge();
   }, []);
 
   return (
@@ -45,6 +31,7 @@ export default function CodeTimeBadge() {
     transition transform hover:scale-105 hover:shadow-md
   "
     >
+      {" "}
       {message ? `CodeTime: ${message}` : "Loading..."}
     </div>
   );
