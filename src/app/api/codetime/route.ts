@@ -6,7 +6,7 @@ export async function GET() {
     const res = await fetch(
       "https://api.codetime.dev/v3/users/shield?uid=29930",
       {
-        headers: { "Cache-Control": "no-cache" }, // optional
+        headers: { "Cache-Control": "no-cache" },
       }
     );
 
@@ -14,7 +14,13 @@ export async function GET() {
 
     const data = await res.json();
     return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ error: "CodeTime API error" }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+    return NextResponse.json(
+      { error: "An unknown error occurred" },
+      { status: 500 }
+    );
   }
 }

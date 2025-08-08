@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 
 export default function CodeTimeBadge() {
   return (
-    <img
+    <Image
       src="https://codetime.dev/shield/29930"
       alt="CodeTime Badge"
       className="h-6 inline-block"

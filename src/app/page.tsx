@@ -127,7 +127,13 @@ export default function Home() {
                     : "bg-gray-100 text-gray-900 border-gray-300 "
                 }`}
               >
-                <img src={skill.logo} alt={skill.name} className="h-4 w-4" />
+                <Image
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="h-4 w-4"
+                  width={4}
+                  height={4}
+                />
                 {skill.name}
               </span>
             ))}
