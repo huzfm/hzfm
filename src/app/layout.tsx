@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "huzfm",
   description: "Personal Portfolio",
   openGraph: {
     title: "Portfolio",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio",
     images: [
       {
-        url: "https://huzfm/vercel.app",
+        url: "https://huzfm.vercel.app/card.jpg",
         width: 1200,
         height: 630,
         alt: "Portfolio Preview",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Portfolio",
     description: "Checkout my latest work, projects, and skills!",
-    images: ["/public/card.jpg"],
+    images: ["https://huzfm.vercel.app/card.jpg"],
   },
 };
 

@@ -28,7 +28,7 @@ export default function OnlineStatus() {
       className="
         relative inline-block overflow-hidden 
         text-xs sm:text-[12px] 
-        min-w-[65px] sm:min-w-[70px] 
+        min-w-[75px] sm:min-w-[80px] 
         h-[16px] sm:h-[18px]
       "
     >
