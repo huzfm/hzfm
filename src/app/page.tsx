@@ -9,7 +9,6 @@ import { Mail, Github, Twitter } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { useTheme } from "@/contexts/ThemeContext";
 import ThemeToggle from "@/Components/ThemeToggle";
-import { Heart } from "lucide-react";
 import GithubGraph from "@/Components/Github-Graph";
 import CodeTimeBadge from "@/Components/Code-Time";
 import OnlineStatus from "@/Components/Animating-Text";
@@ -106,6 +105,30 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
+
+        {/* Projects Section */}
+        <section className="mb-12">
+          <h2
+            className={`text-xl mb-6 font-dotz ${
+              isDark ? "text-white" : "text-black"
+            }`}
+          >
+            Projects
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                name={project.name}
+                description={project.description}
+                live={project.live}
+                sourceCode={project.sourceCode}
+              />
+            ))}
+          </div>
+        </section>
+
         <section className="mb-12">
           <h2
             className={`text-xl mb-4 font-dotz ${
@@ -135,37 +158,10 @@ export default function Home() {
               </span>
             ))}
           </div>
-        </section>
-
-        {/* Projects Section */}
-        <section className="mb-12">
-          <h2
-            className={`text-xl mb-6 font-dotz ${
-              isDark ? "text-white" : "text-black"
-            }`}
-          >
-            Projects
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                name={project.name}
-                description={project.description}
-                live={project.live}
-                sourceCode={project.sourceCode}
-              />
-            ))}
-            <footer className="text-center pt-5 pb-5 flex justify-center items-center gap-2 text-sm/snug">
-              Made with{" "}
-              <Heart
-                className="w-5 h-5 text-red-500 inline"
-                fill="currentColor"
-              />{" "}
-              by huzfm
-            </footer>
-          </div>
+          <footer className="text-center m-10 pt-5 pb-5 flex justify-center items-center gap-1.5 text-sm/snug">
+            Made by
+            <p className="text-red-800 font-semibold">huzfm</p>
+          </footer>
         </section>
       </div>
 
