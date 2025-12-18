@@ -1,6 +1,7 @@
 export const skillsData = [
   { name: "JavaScript", logo: "/logos/javascript-logo-svgrepo-com.svg" },
   { name: "TypeScript", logo: "/logos/typescript-svgrepo-com.svg" },
+  {name: "Rust", logo: "/logos/rust-svgrepo-com.svg" },
   { name: "React", logo: "/logos/react-svgrepo-com.svg" },
   { name: "Next.js", logo: "/logos/nextjs-fill-svgrepo-com.svg" },
   { name: "Tailwind CSS", logo: "/logos/tailwindcss-icon-svgrepo-com.svg" },
