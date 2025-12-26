@@ -14,7 +14,7 @@ export const skillsData = [
   { name: "Firebase", logo: "/logos/firebase-svgrepo-com.svg" },
   { name: "Prisma", logo: "/logos/prisma-svgrepo-com.svg" },
   { name: "Git", logo: "/logos/git-svgrepo-com.svg" },
-  { name: "Docker", logo: "/logos/docker-svgrepo-com.svg" },
+  // { name: "Docker", logo: "/logos/docker-svgrepo-com.svg" },
   { name: "Postman", logo: "/logos/postman-icon-svgrepo-com.svg" },
   { name: "Vercel", logo: "/logos/vercel-fill-svgrepo-com.svg" },
   { name: "Netlify", logo: "/logos/netlify-svgrepo-com.svg" },
