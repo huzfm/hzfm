@@ -6,6 +6,7 @@ import Projects from "@/Components/Projects";
 import Skills from "@/Components/Skills";
 import Footer from "@/Components/Footer";
 import SocialBar from "@/Components/SocialBar";
+import FooterGlow from "@/Components/FooterEnd";
 
 export default function Home() {
   const { isDark } = useTheme();
@@ -40,9 +41,13 @@ export default function Home() {
         <Skills />
 
         <Footer />
+        <SocialBar />
       </div>
 
-      <SocialBar />
+      <div className="pt-20">
+        <FooterGlow />
+
+      </div>
     </>
   );
 }
