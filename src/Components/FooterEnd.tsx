@@ -5,7 +5,7 @@ export default function FooterGlow() {
 
         {/* Deep outer glow */}
         <h1
-          className="absolute text-[120px] md:text-9xl font-extrabold 
+          className="absolute text-[200px] md:text-9xl font-extrabold 
                      tracking-[0.25em] scale-x-110
                      text-violet-900 opacity-50 blur-3xl translate-y-[50px]"
         >
@@ -14,7 +14,7 @@ export default function FooterGlow() {
 
         {/* Inner energy flow */}
         <h1
-          className="absolute text-[120px] md:text-9xl font-extrabold 
+          className="absolute text-[200px] md:text-9xl font-extrabold 
                      tracking-[0.25em] scale-x-110
                      text-transparent bg-clip-text
                      bg-[linear-gradient(120deg,#ede9fe,#7c3aed,#2e1065,#7c3aed,#ede9fe)]
