@@ -12,7 +12,7 @@ export const projects: Project[] = [
     name: "KeyBox",
     description:
       "A license key manager that generates, validates, and revokes access to your software",
-    live: "https://keybox.vercel.app/",
+    live: "https://keyboxx.vercel.app/",
     sourceCode: "https://github.com/huzfm/keybox",
   },
   {
