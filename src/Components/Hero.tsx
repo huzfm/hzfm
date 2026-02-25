@@ -17,7 +17,7 @@ export default function Hero() {
             alt={personalData.Name}
             width={300}
             height={300}
-            className={`w-15 h-15 rounded-full border-2 ${
+            className={`w-[150px] h-[150px] rounded-full border-2 ${
               isDark ? "border-gray-700" : "border-gray-300"
             }`}
           />
