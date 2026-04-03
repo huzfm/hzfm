@@ -13,7 +13,7 @@ export default function About() {
     <section className="mb-12">
      
       <h2
-        className={`text-2xl mb-4  ${
+        className={`text-2xl mb-4 font-dotz ${
           isDark ? "text-white" : "text-black"
         }`}
       >
@@ -30,7 +30,7 @@ export default function About() {
           isDark ? "text-white" : "text-black"
         }`}
       >
-        <p className="text-justify">{personalData.aboutMe}</p>
+        <p className="text-justify text-md">{personalData.aboutMe}</p>
       </div>
       <div className="pt-10">
         <GithubGraph />

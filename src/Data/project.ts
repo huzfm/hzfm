@@ -7,22 +7,16 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    id: "0",
-    name: "KeyBox",
-    description:
-      "A license key manager that generates, validates, and revokes access to your software",
-    live: "https://keyboxx.vercel.app/",
-    sourceCode: "https://github.com/huzfm/keybox",
-  },
+ 
   {
     id: "1",
-    name: "Devark",
+    name: "The Estate",
     description:
-      "Devark is a powerful CLI tool that helps you scaffold ready to use backend features instantly — like Oauth, OTP services, payments, file uploads, and more — without the boilerplate.",
-    live: "https://devarkfe.vercel.app/",
-    sourceCode: "https://github.com/huzfm/devark",
+      "This is a real estate management system that lets users manage properties built with vanilla JavaScript for core functionality and Firebase for secure login storage, and real-time database",
+    live: "https://thestate.netlify.app/",
+    sourceCode: "https://github.com/huzfm/The_estate",
   },
+ 
   {
     id: "2",
     name: "Skill Connect",
@@ -34,19 +28,28 @@ export const projects: Project[] = [
 
   {
     id: "3",
-    name: "The Estate",
+    name: "Devark",
     description:
-      "This is a real estate management system that lets users manage properties built with vanilla JavaScript for core functionality and Firebase for secure login storage, and real-time database",
-    live: "https://thestate.netlify.app/",
-    sourceCode: "https://github.com/huzfm/The_estate",
+      "Devark is a powerful CLI tool that helps you scaffold ready to use backend features instantly — like Oauth, OTP services, payments, file uploads, and more — without the boilerplate.",
+    live: "https://devarkk.vercel.app/",
+    sourceCode: "https://github.com/huzfm/devark",
   },
-
   {
     id: "4",
-    name: "Travel itenary",
+    name: "KeyBox",
     description:
-      "This React app is an intuitive, user-friendly web platform showcases the famous picnic spots of Kashmir. Built with React, this website offers a seamless experience for users interested in discovering new destinations, and organizing their journeys. ",
-    live: "https://travel-journey-react.netlify.app/",
-    sourceCode: "https://github.com/huzfm/Travel-journey",
+      "A license key manager that generates, validates, and revokes access to your software",
+    live: "https://keyboxx.vercel.app/",
+    sourceCode: "https://github.com/huzfm/keybox",
   },
+  {
+    id: "5",
+    name: "Donna AI",
+    description:
+      "You Personal AI Assistant. Upload documents, ask questions, manage emails all in one intelligent workspace. Donna understands your files and helps you work smarter.",
+    live: "https://thedonna.vercel.app/",
+    sourceCode: "https://github.com/huzfm/Donna",
+  }
+
+
 ];

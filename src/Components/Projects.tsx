@@ -16,7 +16,7 @@ export default function Projects() {
         Projects
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
-        {projects.map((project) => (
+        {[...projects].reverse().map((project) => (
           <ProjectCard
             key={project.id}
             id={project.id}

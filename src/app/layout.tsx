@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Doto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const doto = Doto({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-dotz-bold",
+});
 
 export const metadata: Metadata = {
   title: "huzfm",
@@ -39,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${doto.variable}`}>
         <ThemeProvider>
           {children}
           <Analytics />
