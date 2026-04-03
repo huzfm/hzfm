@@ -1,23 +1,19 @@
 "use client";
 import Image from "next/image";
 import { personalData } from "@/Data/personalInfo";
-import { contactData } from "@/Data/Contact";
 import { useTheme } from "@/contexts/ThemeContext";
 import OnlineStatus from "@/Components/Animating-Text";
-import { Github, Mail, Twitter } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
 
-const roles = ["Software Developer", "Web Apps", "CLI Tools", "Real-time Systems"];
 
 export default function Hero() {
   const { isDark } = useTheme();
 
   return (
     <header className="mb-8 sm:mb-12 font-caprasimo pt-6 sm:pt-8">
-      {/* Top row: avatar + name block */}
+
       <div className="flex items-start justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
         <div className="flex items-center gap-3 sm:gap-5">
-          {/* Avatar with glowing ring */}
+
           <div className="relative flex-shrink-0">
             <div
               className={`absolute inset-0 rounded-full blur-md opacity-40 ${
