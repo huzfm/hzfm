@@ -77,7 +77,15 @@ export const projects: Project[] = [
     tag: "freelance",
   },
   {
-    id:"9",
+  id: "9",
+  name: "The Heating Store",
+  description: "The Heating Store provides underfloor heating solutions designed to deliver comfortable, energy-efficient warmth for homes and commercial spaces.",
+  live: "https://theheatingstore.in",
+  sourceCode: "https://github.com/huzfm",
+  tag: "freelance"
+},
+  {
+    id:"10",
     name: "Tripoday tours and Travels",
     description: "Tripoday CRM simplifies travel agency operations with hotel, vehicle, destination, itinerary, billing, and receipt management, along with automatic lead assignment, follow-ups, and WhatsApp integration.",
     live:"http://crm.tripday.com",
