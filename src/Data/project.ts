@@ -76,8 +76,14 @@ export const projects: Project[] = [
     sourceCode: "https://github.com/huzfm",
     tag: "freelance",
   },
-
-
+  {
+    id:"9",
+    name: "Tripoday tours and Travels",
+    description: "Tripoday CRM simplifies travel agency operations with hotel, vehicle, destination, itinerary, billing, and receipt management, along with automatic lead assignment, follow-ups, and WhatsApp integration.",
+    live:"http://crm.tripday.com",
+    sourceCode: "https://github.com/huzfm",
+    tag:"freelance"
+  },
 ];
 
 
